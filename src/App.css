@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: calc(0.7vh + 0.7vw);
+  font-family: 'Poppins', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  padding: 4rem;
+}
+
+div.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+div.title {
+  padding: 1rem 0;
+  border-bottom: 2px solid black;
+  font-weight: 600;
+}
+
+div.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  cursor: pointer;
+}
+
+div.fill {
+  height: 7px;
+  width: 7px;
+  background-color: green;
+  border-radius: 50px;
+}
+
+div.contents {
+  width: 100%;
+  height: 95%;
+  display: flex;
+}
+
+div.listings {
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+  gap: 0.5rem;
+  width: 100%;
+}
+
+div.cartView {
+  width: 20%;
+  height: 100%;
+  background-color: whitesmoke;
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+div.listing {
+  border: 1px solid white;
+  margin-bottom: 1rem;
+}
+
+div.image {
+  height: 200px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+div.details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+  margin-top: 0.5rem;
+}
+
+p.title {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+p.cost {
+  font-size: 0.8rem;
+}
+
+button {
+  padding: 0.2rem 0.3rem;
+  font-size: 0.7rem;
+  background-color: grey;
+  border: none;
+  color: white;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: black;
+}
+
+button.remove:hover {
+  background-color: tomato;
+}
+
+div.count {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+div.count>button {
+  margin-top: 0;
+}
+
+p.value {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+div.total {
+  background-color: darkslategrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: whitesmoke;
+  padding: 1rem;
+}
+
+div.total>p.value {
+  font-size: 0.8rem;
+}
+
+div.cartItem {
+  background-color: white;
+  font-size: 0.8rem;
+}
+
+div.top {
+  padding: 0.4rem;
+}
+
+div.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgray;
+  padding: 0.35rem;
+}
+
+div.cartItem div.count {
+  margin-top: 0;
+}
+
+div.checkout {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: scale 0.3s ease-in-out;
+}
+
+div.checkout>p {
+  color: white;
+  font-size: 0.8rem;
+}
+
+div.checkout:hover {
+  scale: 1.03
+}
+
+div.success {
+  position: absolute;
+  left: calc(50% - 200px);
+  background-color: green;
+  width: 400px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  top: -100px;
+}
+
+@media (max-width: 1024px) {
+
+  div.listings {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 290px));
+    overflow-y: scroll;
+  }
+
+  div.image {
+    height: 250px;
+  }
+
+  div.cartView {
+    width: 45%;
+  }
+
+  div.cartItem {
+    font-size: 1rem;
+  }
+
+  div.top {
+    padding: 0.8rem;
+  }
+
+  div.bottom {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  div.total {
+    padding: 1.5rem;
+  }
+
+  div.total>p.header {
+    font-size: 1.4rem;
+  }
+
+  div.total>p.value {
+    font-size: 1.2rem;
+  }
+
+  div.checkout {
+    padding: 0.4rem 0.6rem;
+  }
+
+  div.checkout>p {
+    font-size: 1.2rem;
+  }
+
+  p.title {
+    font-size: 1.2rem;
+  }
+
+  p.cost {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+  div.title>p {
+    font-size: 1.5rem;
+  }
+
+  div.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    cursor: pointer;
+  }
+
+  div.fill {
+    height: 7px;
+    width: 7px;
+    background-color: green;
+    border-radius: 50px;
+  }
+
+  div.listings {
+    justify-content: center;
+    grid-template-columns: 350px;
+  }
+
+  p.title {
+    font-size: 1.3rem;
+  }
+
+  p.cost {
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  div.contents {
+    flex-direction: column-reverse;
+    margin-top: 1rem;
+  }
+
+  div.cartView {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  div.total {
+    padding: 2rem;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  div.total>p.header {
+    font-size: 1.5rem;
+  }
+
+  div.total>p.value {
+    font-size: 1.3rem;
+  }
+
+  div.count {
+    font-size: 1.4rem;
+  }
+
+  div.top {
+    padding: 0.8rem;
+    font-size: 1.4rem;
+  }
+
+  div.bottom {
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+
+  button {
+    padding: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  div.checkout {
+    padding: 0.7rem;
+  }
+
+  div.checkout>p {
+    font-size: 1.7rem;
+  }
+
+  div.success {
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 100px;
+    top: -100px;
+  }
+}
